@@ -317,3 +317,27 @@ body {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(5px); }
 }
+
+/* ÚPRAVA POUZE PRO TELEFONY (text i datum výrazně blíž k figurkám) */
+@media (max-width: 640px) {
+    .hero-top {
+        margin-bottom: 4px;
+    }
+
+    .typewriter-title {
+        line-height: 1.1;
+        min-height: 1.1em;
+        margin-bottom: -38px; /* přitáhne nadpis výrazně blíž k figurkám na mobilu */
+    }
+
+    .figurines-wrapper {
+        width: min(390px, 88vw);
+    }
+
+    .typewriter-date {
+        line-height: 1.1;
+        min-height: 1.1em;
+        margin-top: -38px; /* přitáhne datum výrazně blíž k figurkám na mobilu */
+    }
+}
+
