@@ -319,7 +319,7 @@ body {
 }
 
 /* ÚPRAVA PRO TELEFONY A MENŠÍ OBRAZOVKY */
-@media (max-width: 850px) {
+@media (max-width: 750px) {
     body {
         background-color: var(--bg-cream);
     }
@@ -342,7 +342,7 @@ body {
     }
 
     .figurines-wrapper {
-        width: 96vw;
+        width: min(550px, 98vw);;
     }
 
     .typewriter-date {
@@ -353,6 +353,6 @@ body {
     }
 
     .scroll-prompt {
-        bottom: 78px;
+        bottom: 90px;
     }
 }
