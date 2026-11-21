@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana & Marek | 29. 9. 2027</title>
+    <!-- Načtení písem z Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Plátno pro padající konfety -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Horní lišta (objeví se až po odscrollování z úvodní strany) -->
+    <header id="sticky-header" class="sticky-header">
+        <button id="menu-toggle" class="menu-btn" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-monogram">
+            <span class="monogram-initials">J&amp;M</span>
+            <span class="monogram-heart">🤍</span>
+            <span class="monogram-date">29.9.2027</span>
+        </div>
+    </header>
+
+    <!-- Rozbalovací navigace po kliknutí na ikonu menu -->
+    <nav id="nav-drawer" class="nav-drawer">
+        <button id="menu-close" class="close-btn" aria-label="Zavřít menu">&times;</button>
+        <ul>
+            <li><a href="#uvod" class="nav-link">Úvodní pozvánka</a></li>
+            <li><a href="#informace" class="nav-link">Základní informace</a></li>
+            <!-- Sem později přidáme další položky menu -->
+        </ul>
+    </nav>
+
+    <!-- ÚVODNÍ POZVÁNKA (100 % výšky obrazovky) -->
+    <section id="uvod" class="hero-section">
+        <div class="hero-top">
+            <h1 class="couple-names">Jana &amp; Marek</h1>
+        </div>
+
+        <div class="hero-center">
+            <!-- Nadpis, který se vypíše písmenko po písmenku -->
+            <p id="invite-text" class="typewriter-title" data-text="Srdečně vás zveme na naši svatbu"></p>
+
+            <!-- Obrázek Lego novomanželů bez pozadí (PNG) -->
+            <div class="figurines-wrapper">
+                <img src="figurky.png" alt="Lego novomanželé Jana a Marek" class="figurines-img">
+            </div>
+
+            <!-- Datum, které se vypíše po nadpisu -->
+            <p id="date-text" class="typewriter-date" data-text="29.9.2027"></p>
+        </div>
+
+        <!-- Výzva ke scrollování (zobrazí se až po dopsání textu a data) -->
+        <a href="#informace" id="scroll-prompt" class="scroll-prompt">
+            <span class="scroll-label">pro další informace scrolluj dolů</span>
+            <span class="scroll-arrow">&#8595;</span>
+        </a>
+    </section>
+
+    <!-- POKRAČOVÁNÍ WEBU PO SCROLLOVÁNÍ (připraveno k doplnění) -->
+    <main id="informace" class="content-section">
+        <div class="placeholder-box">
+            <h2>Zde budou další svatební informace</h2>
+            <p>Místo obřadu, harmonogram dne, dress code, potvrzení účasti...</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
