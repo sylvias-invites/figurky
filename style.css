@@ -1,5 +1,5 @@
 :root {
-    --bg-cream: #FFDBA0;
+    --bg-cream: #FFEDD0;
     --bg-cream-darker: #F3EAD8;
     --accent-sand: #E6D7BE;
     --text-dark: #3B342B;
@@ -332,7 +332,8 @@ body {
         line-height: 1.1;
         height: 2.5em;
         overflow: visible;
-        margin-bottom: -58px; /* přitáhne nadpis výrazně blíž k figurkám na mobilu */
+        margin-bottom: px; 
+        transform: trasnlateY(28px);
     }
 
     .figurines-wrapper {
@@ -342,7 +343,8 @@ body {
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
-        margin-top: -58px; /* přitáhne datum výrazně blíž k figurkám na mobilu */
+        margin-top: px; 
+        transform: trasnlateY(-20px);
     }
 }
 
