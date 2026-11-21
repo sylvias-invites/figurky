@@ -163,22 +163,22 @@ body {
 .hero-section {
     min-height: 100dvh;
     width: 100%;
-    padding: 24px 16px 28px;
+    padding: 24px 16px 82px; /* dole necháme prostor pro nápis se šipkou */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: relative;
 }
 
 .hero-top {
-    margin-top: 8px;
+    margin-top: 6px;
+    margin-bottom: 18px;
 }
 
 .couple-names {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(3rem, 7vw, 4.8rem);
+    font-size: clamp(2.8rem, 7vw, 4.6rem);
     font-weight: 400;
     color: var(--text-dark);
     letter-spacing: 0.02em;
@@ -186,44 +186,36 @@ body {
     animation: fadeInSmooth 1.2s ease forwards;
 }
 
+/* Středový blok: text, figurky a datum těsně u sebe */
 .hero-center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* posune obsah blíž k sobě místo roztahování po celé výšce */
-    gap: 10px; /* menší mezera mezi textem, figurkami a datem (původně 18px) */
+    justify-content: center;
+    gap: 2px; /* minimální mezera mezi textem, figurkami a datem */
     max-width: 680px;
     width: 100%;
-    margin-top: 24px; /* jemný odstup pod jmény Jana & Marek */
-    margin-bottom: auto;
+    margin: auto 0;
 }
 
-
-/* Text vypisovaný po písmenech */
+/* Text těsně nad figurkami */
 .typewriter-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+    font-size: clamp(1.45rem, 3.5vw, 2.1rem);
     font-weight: 400;
     letter-spacing: 0.04em;
-    min-height: 1.4em;
+    line-height: 1.25;
+    min-height: 1.25em;
+    margin-bottom: -6px; /* ještě víc přitáhne text k figurkám */
     color: var(--text-dark);
 }
 
-.typewriter-date {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.6rem, 3.8vw, 2.3rem);
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    min-height: 1.4em;
-    color: var(--text-dark);
-}
-
-/* Obrázek figurek bez pozadí */
+/* Obrázek figurek */
 .figurines-wrapper {
-    width: min(440px, 85vw);
+    width: min(340px, 72vw); /* o něco kompaktnější, aby se vše pohodlně vešlo */
     background: transparent;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
     animation: fadeInUp 1.2s ease 0.2s forwards;
 }
 
@@ -235,76 +227,56 @@ body {
     filter: drop-shadow(0 10px 16px rgba(59, 52, 43, 0.12));
 }
 
-/* Šipka dolů */
+/* Datum těsně pod figurkami */
+.typewriter-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1.25;
+    min-height: 1.25em;
+    margin-top: -6px; /* přitáhne datum blíž k figurkám */
+    color: var(--text-dark);
+}
+
+/* Šipka a text dole v úvodní sekci */
 .scroll-prompt {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translate(-50%, 8px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     text-decoration: none;
     color: var(--text-muted);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(8px);
     transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
-    margin-bottom: 6px;
+    z-index: 60;
 }
 
 .scroll-prompt.visible {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
 }
 
 .scroll-label {
     font-size: 0.78rem;
     letter-spacing: 0.12em;
     text-transform: lowercase;
+    white-space: nowrap;
 }
 
 .scroll-arrow {
     font-size: 1.3rem;
+    line-height: 1;
     animation: bounceArrow 1.8s infinite;
-}
-
-/* Další sekce webu */
-.content-section {
-    min-height: 100vh;
-    padding: 110px 20px 60px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    border-top: 1px solid var(--accent-sand);
-}
-
-.placeholder-box {
-    max-width: 720px;
-    text-align: center;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.45);
-    border: 1px solid var(--accent-sand);
-    border-radius: 16px;
-}
-
-.placeholder-box h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    margin-bottom: 12px;
-}
-
-/* Animace */
-@keyframes fadeInSmooth {
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 @keyframes bounceArrow {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+    50% { transform: translateY(5px); }
 }
