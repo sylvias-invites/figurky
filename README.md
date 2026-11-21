@@ -6,7 +6,7 @@ Jak web spustit
 2. Online (zdarma): Celou složku lze nahrát například na GitHub Pages, Netlify nebo Vercel, kde web okamžitě získá veřejný odkaz k rozeslání hostům.
 
 Kde co upravit
-Odrážka Jména, nadpisy a datum: V souboru index.html upravte texty uvnitř tagů <h1>, atributů data-text="..." (pro postupně vypisovaný text) a v hlavičce .header-monogram.
+Odrážka Jména, nadpisy a datum: V souboru index.html upravte texty uvnitř tagů, atributů data-text="..." (pro postupně vypisovaný text) a v hlavičce .header-monogram.
 Odrážka Obrázek figurek: Nahraďte soubor figurky.png vlastním obrázkem ve formátu PNG s průhledným pozadím (ideální šířka kolem 800–1000 px).
 Odrážka Barevná paleta: Na úplném začátku souboru style.css (sekce :root) lze jednoduše změnit odstín krémového pozadí (--bg-cream), doplňkové béžové (--accent-sand) i barvu písma (--text-dark).
 Odrážka Rychlost psaní textu a konfety: V souboru script.js lze upravit rychlost vypisování písmen (hodnoty 65 a 95 v milisekundách) nebo počet a barvy padajících konfet (confettiCount a pole colors).
