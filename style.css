@@ -212,7 +212,7 @@ body {
 
 /* Obrázek figurek */
 .figurines-wrapper {
-    width: min(420px, 85vw);
+    width: min(480px, 92vw);
     background: transparent;
     opacity: 0;
     transform: translateY(8px);
@@ -333,18 +333,18 @@ body {
         height: 2.5em;
         overflow: visible;
         margin-bottom: px; 
-        transform: trasnlateY(28px);
+        transform: trasnlateY(48px);
     }
 
     .figurines-wrapper {
-        width: min(390px, 88vw);
+        width: min(450px, 90vw);
     }
 
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
         margin-top: px; 
-        transform: trasnlateY(-20px);
+        transform: trasnlateY(-35px);
     }
 }
 
