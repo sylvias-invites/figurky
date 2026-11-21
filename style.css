@@ -172,7 +172,7 @@ body {
 }
 
 .hero-top {
-    margin-top: 6px;
+    margin-top: 12px;
     margin-bottom: 18px;
 }
 
@@ -196,6 +196,7 @@ body {
     max-width: 850px;
     width: 100%;
     margin: auto 0;
+    transform: translateY(-24px); /* záporné číslo = výš, kladné = níž */
 }
 
 /* Text těsně nad figurkami */
@@ -206,7 +207,7 @@ body {
     letter-spacing: 0.04em;
     line-height: 1.25;
     min-height: 1.25em;
-    margin-bottom: -20px;
+    margin-bottom: -30px;
     color: var(--text-dark);
 }
 
@@ -235,7 +236,7 @@ body {
     letter-spacing: 0.14em;
     line-height: 1.25;
     min-height: 1.25em;
-    margin-top: -20px;
+    margin-top: -30px;
     color: var(--text-dark);
 }
 
@@ -338,7 +339,7 @@ body {
         height: 2.5em;
         overflow: visible;
         margin-bottom: 0;
-        transform: translateY(75px);
+        transform: translateY(85px);
     }
 
     .figurines-wrapper {
@@ -349,7 +350,7 @@ body {
         line-height: 1.1;
         min-height: 1.1em;
         margin-top: 0;
-        transform: translateY(-75px);
+        transform: translateY(-85px);
     }
 
     .scroll-prompt {
