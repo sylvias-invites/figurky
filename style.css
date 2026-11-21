@@ -354,6 +354,7 @@ body {
     }
 
     .scroll-prompt {
-        bottom: 90px;
+        position: fixed; 
+        bottom: 24px;
     }
 }
