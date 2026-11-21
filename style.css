@@ -334,7 +334,7 @@ body {
         height: 2.5em;
         overflow: visible;
         margin-bottom: 0;
-        transform: translateY(32px);
+        transform: translateY(45px);
     }
 
     .figurines-wrapper {
@@ -345,6 +345,6 @@ body {
         line-height: 1.1;
         min-height: 1.1em;
         margin-top: 0;
-        transform: translateY(-24px);
+        transform: translateY(-40px);
     }
 }
