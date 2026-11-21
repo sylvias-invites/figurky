@@ -1,16 +1,30 @@
-Svatební web – Jana & Marek (29. 9. 2027)
+# Svatební web – Jana & Marek (29. 9. 2027)
+
 Jednoduchý, lehký a responzivní svatební web ve světle krémovém ladění s úvodní animovanou pozvánkou, padajícími konfetami a postavičkami Lego novomanželů.
 
-Jak web spustit
-1. Lokálně v počítači: Stačí dvakrát kliknout na soubor index.html – otevře se přímo ve webovém prohlížeči bez nutnosti cokoli instalovat.
-2. Online (zdarma): Celou složku lze nahrát například na GitHub Pages, Netlify nebo Vercel, kde web okamžitě získá veřejný odkaz k rozeslání hostům.
+## Struktura projektu
 
-Kde co upravit
-Odrážka Jména, nadpisy a datum: V souboru index.html upravte texty uvnitř tagů, atributů data-text="..." (pro postupně vypisovaný text) a v hlavičce .header-monogram.
-Odrážka Obrázek figurek: Nahraďte soubor figurky.png vlastním obrázkem ve formátu PNG s průhledným pozadím (ideální šířka kolem 800–1000 px).
-Odrážka Barevná paleta: Na úplném začátku souboru style.css (sekce :root) lze jednoduše změnit odstín krémového pozadí (--bg-cream), doplňkové béžové (--accent-sand) i barvu písma (--text-dark).
-Odrážka Rychlost psaní textu a konfety: V souboru script.js lze upravit rychlost vypisování písmen (hodnoty 65 a 95 v milisekundách) nebo počet a barvy padajících konfet (confettiCount a pole colors).
+Všechny soubory patří do jedné složky:
 
-Použité technologie
-Odrážka Čisté HTML5, CSS3 a JavaScript (Vanilla JS) – bez externích knihoven a frameworků.
-Odrážka Písma z Google Fonts: Great Vibes (jména), Cormorant Garamond (nadpisy a datum), Montserrat (doplňkové texty).
+- `index.html` – struktura stránky, texty a rozbalovací menu
+- `style.css` – barvy, písma, rozvržení a vzhled animací
+- `script.js` – postupné vypisování textu, konfety a chování menu
+- `figurky.png` – obrázek Lego novomanželů bez pozadí (průhledné PNG)
+- `README.md` – dokumentace k projektu
+
+## Jak web spustit
+
+1. **Lokálně v počítači:** Stačí dvakrát kliknout na soubor `index.html` – otevře se přímo ve webovém prohlížeči bez nutnosti cokoli instalovat.
+2. **Online:** Celou složku lze publikovat například přes **GitHub Pages**, **Netlify** nebo **Vercel** a sdílet odkaz s hosty.
+
+## Kde co upravit
+
+- **Jména, nadpisy a datum:** V souboru `index.html` upravte texty uvnitř `<h1>`, atributů `data-text="..."` a v hlavičce `.header-monogram`.
+- **Obrázek figurek:** Nahraďte soubor `figurky.png` vlastním obrázkem ve formátu PNG s průhledným pozadím.
+- **Barevná paleta:** Na začátku souboru `style.css` v sekci `:root` lze změnit proměnné `--bg-cream`, `--accent-sand` a `--text-dark`.
+- **Rychlost psaní a konfety:** V souboru `script.js` lze upravit rychlost vypisování znaků i počet či barvy konfet (`confettiCount`, `colors`).
+
+## Použité technologie
+
+- HTML5, CSS3 a JavaScript (Vanilla JS)
+- Písma z Google Fonts (*Great Vibes*, *Cormorant Garamond*, *Montserrat*)
