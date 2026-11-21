@@ -242,7 +242,7 @@ body {
 /* Šipka a text dole v úvodní sekci */
 .scroll-prompt {
     position: absolute;
-    bottom: 22px;
+    bottom: 40px;
     left: 50%;
     transform: translate(-50%, 8px);
     display: flex;
