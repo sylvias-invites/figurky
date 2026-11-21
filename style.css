@@ -318,10 +318,14 @@ body {
     50% { transform: translateY(5px); }
 }
 
-/* ÚPRAVA POUZE PRO TELEFONY */
+/* ÚPRAVA PRO TELEFONY A MENŠÍ OBRAZOVKY */
 @media (max-width: 850px) {
     body {
         background-color: var(--bg-cream);
+    }
+
+    .hero-section {
+        padding: 20px 14px 115px;
     }
 
     .hero-top {
@@ -334,17 +338,21 @@ body {
         height: 2.5em;
         overflow: visible;
         margin-bottom: 0;
-        transform: translateY(50px);
+        transform: translateY(75px);
     }
 
     .figurines-wrapper {
-        width: min(550px, 92vw);
+        width: 96vw;
     }
 
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
         margin-top: 0;
-        transform: translateY(-55px);
+        transform: translateY(-75px);
+    }
+
+    .scroll-prompt {
+        bottom: 78px;
     }
 }
