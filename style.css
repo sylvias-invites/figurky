@@ -193,7 +193,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2px;
-    max-width: 680px;
+    max-width: 850px;
     width: 100%;
     margin: auto 0;
 }
@@ -212,7 +212,7 @@ body {
 
 /* Obrázek figurek */
 .figurines-wrapper {
-    width: min(520px, 92vw);
+    width: min(550px, 92vw);
     background: transparent;
     opacity: 0;
     transform: translateY(8px);
@@ -319,7 +319,7 @@ body {
 }
 
 /* ÚPRAVA POUZE PRO TELEFONY */
-@media (max-width: 640px) {
+@media (max-width: 850px) {
     body {
         background-color: var(--bg-cream);
     }
@@ -334,17 +334,17 @@ body {
         height: 2.5em;
         overflow: visible;
         margin-bottom: 0;
-        transform: translateY(45px);
+        transform: translateY(50px);
     }
 
     .figurines-wrapper {
-        width: min(520px, 92vw);
+        width: min(550px, 92vw);
     }
 
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
         margin-top: 0;
-        transform: translateY(-40px);
+        transform: translateY(-55px);
     }
 }
