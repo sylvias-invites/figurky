@@ -320,6 +320,10 @@ body {
 
 /* ÚPRAVA POUZE PRO TELEFONY (text i datum výrazně blíž k figurkám) */
 @media (max-width: 640px) {
+
+    body {
+    background-color: var(--bg-cream);
+}
     .hero-top {
         margin-bottom: 4px;
     }
@@ -327,7 +331,7 @@ body {
     .typewriter-title {
         line-height: 1.1;
         min-height: 1.1em;
-        margin-bottom: -38px; /* přitáhne nadpis výrazně blíž k figurkám na mobilu */
+        margin-bottom: -58px; /* přitáhne nadpis výrazně blíž k figurkám na mobilu */
     }
 
     .figurines-wrapper {
@@ -337,7 +341,7 @@ body {
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
-        margin-top: -38px; /* přitáhne datum výrazně blíž k figurkám na mobilu */
+        margin-top: -58px; /* přitáhne datum výrazně blíž k figurkám na mobilu */
     }
 }
 
