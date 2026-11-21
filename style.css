@@ -212,7 +212,7 @@ body {
 
 /* Obrázek figurek */
 .figurines-wrapper {
-    width: min(480px, 92vw);
+    width: min(520px, 92vw);
     background: transparent;
     opacity: 0;
     transform: translateY(8px);
@@ -318,13 +318,14 @@ body {
     50% { transform: translateY(5px); }
 }
 
-/* ÚPRAVA POUZE PRO TELEFONY (text i datum výrazně blíž k figurkám) */
+/* ÚPRAVA POUZE PRO TELEFONY */
 @media (max-width: 640px) {
-
     body {
-    background-color: var(--bg-cream);
-}
+        background-color: var(--bg-cream);
+    }
+
     .hero-top {
+        margin-top: 0;
         margin-bottom: 4px;
     }
 
@@ -332,19 +333,18 @@ body {
         line-height: 1.1;
         height: 2.5em;
         overflow: visible;
-        margin-bottom: px; 
-        transform: trasnlateY(48px);
+        margin-bottom: 0;
+        transform: translateY(32px);
     }
 
     .figurines-wrapper {
-        width: min(450px, 90vw);
+        width: min(520px, 92vw);
     }
 
     .typewriter-date {
         line-height: 1.1;
         min-height: 1.1em;
-        margin-top: px; 
-        transform: trasnlateY(-35px);
+        margin-top: 0;
+        transform: translateY(-24px);
     }
 }
-
