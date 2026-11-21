@@ -163,7 +163,7 @@ body {
 .hero-section {
     min-height: 100dvh;
     width: 100%;
-    padding: 24px 16px 82px; /* dole necháme prostor pro nápis se šipkou */
+    padding: 24px 16px 82px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +192,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px; /* minimální mezera mezi textem, figurkami a datem */
+    gap: 2px;
     max-width: 680px;
     width: 100%;
     margin: auto 0;
@@ -206,13 +206,13 @@ body {
     letter-spacing: 0.04em;
     line-height: 1.25;
     min-height: 1.25em;
-    margin-bottom: -6px; /* ještě víc přitáhne text k figurkám */
+    margin-bottom: -6px;
     color: var(--text-dark);
 }
 
 /* Obrázek figurek */
 .figurines-wrapper {
-    width: min(340px, 72vw); /* o něco kompaktnější, aby se vše pohodlně vešlo */
+    width: min(340px, 72vw);
     background: transparent;
     opacity: 0;
     transform: translateY(8px);
@@ -235,7 +235,7 @@ body {
     letter-spacing: 0.14em;
     line-height: 1.25;
     min-height: 1.25em;
-    margin-top: -6px; /* přitáhne datum blíž k figurkám */
+    margin-top: -6px;
     color: var(--text-dark);
 }
 
@@ -274,6 +274,43 @@ body {
     font-size: 1.3rem;
     line-height: 1;
     animation: bounceArrow 1.8s infinite;
+}
+
+/* Další sekce webu */
+.content-section {
+    min-height: 100vh;
+    padding: 110px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid var(--accent-sand);
+}
+
+.placeholder-box {
+    max-width: 720px;
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--accent-sand);
+    border-radius: 16px;
+}
+
+.placeholder-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* Animace */
+@keyframes fadeInSmooth {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounceArrow {
