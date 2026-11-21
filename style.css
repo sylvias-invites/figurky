@@ -1,5 +1,5 @@
 :root {
-    --bg-cream: #FBF6F7;
+    --bg-cream: #FFDBA0;
     --bg-cream-darker: #F3EAD8;
     --accent-sand: #E6D7BE;
     --text-dark: #3B342B;
@@ -330,7 +330,8 @@ body {
 
     .typewriter-title {
         line-height: 1.1;
-        min-height: 1.1em;
+        height: 2.5em;
+        overflow: visible;
         margin-bottom: -58px; /* přitáhne nadpis výrazně blíž k figurkám na mobilu */
     }
 
