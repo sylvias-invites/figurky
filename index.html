@@ -65,14 +65,137 @@
         </a>
     </section>
 
-    <!-- POKRAČOVÁNÍ WEBU PO SCROLLOVÁNÍ (připraveno k doplnění) -->
+        <!-- POKRAČOVÁNÍ WEBU PO SCROLLOVÁNÍ -->
     <main id="informace" class="content-section">
-        <div class="placeholder-box">
-            <h2>Zde budou další svatební informace</h2>
-            <p>Místo obřadu, harmonogram dne, dress code, potvrzení účasti...</p>
+        <div class="info-container">
+            
+            <!-- Horní dekorativní obrázek -->
+            <img src="vetvicka.png" alt="Dekorace" class="top-decor">
+
+            <!-- Náš příběh -->
+            <section class="info-block">
+                <h2 class="section-heading">Něco o nás</h2>
+                <p class="story-text">
+                    Seznámili jsme se před lety na vysoké škole v Praze a od té doby tvoříme nerozlučný tým. 
+                    Společně jsme prošli zkouškovým, prvním bydlením i nespočtem výletů a teď je čas posunout 
+                    náš příběh o další kapitolu dál.
+                </p>
+
+                <!-- Fotka s jemným přechodem do pozadí jako na předloze -->
+                <div class="couple-photo-wrap">
+                    <img src="my.jpg" alt="Jana a Marek" class="couple-photo">
+                </div>
+            </section>
+
+            <!-- Odpočet -->
+            <section class="info-block">
+                <p class="countdown-label">NÁŠ DEN PROBĚHNE ZA:</p>
+                <div class="countdown-grid">
+                    <div class="time-box">
+                        <span id="cd-days" class="time-num">0</span>
+                        <span class="time-unit">DNÍ</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-hours" class="time-num">0</span>
+                        <span class="time-unit">HODIN</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-minutes" class="time-num">0</span>
+                        <span class="time-unit">MINUT</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-seconds" class="time-num">0</span>
+                        <span class="time-unit">VTEŘIN</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Místo konání a mapa -->
+            <section id="misto" class="info-block">
+                <h2 class="section-heading">Místo konání svatby</h2>
+                <p class="venue-text">Svatba se bude konat na <strong>Statku Všetice</strong>.</p>
+                <p class="parking-info">🚗 Parkování je pro všechny hosty zajištěno zdarma přímo v areálu statku.</p>
+
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Statek%20V%C5%A1etice&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <a href="https://maps.google.com/?q=Statek+Všetice" target="_blank" rel="noopener" class="map-link">
+                    Otevřít v aplikaci Google Maps
+                </a>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Svatební program (časová osa) -->
+            <section id="program" class="info-block">
+                <h2 class="section-heading">Svatební program</h2>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <span class="tl-time">11:00</span>
+                        <span class="tl-desc">Svatební obřad</span>
+                    </div>
+                    <div class="timeline-item right">
+                        <span class="tl-time">12:30</span>
+                        <span class="tl-desc">Slavnostní oběd</span>
+                    </div>
+                    <div class="timeline-item left">
+                        <span class="tl-time">15:00</span>
+                        <span class="tl-desc">Krájení dortu a káva</span>
+                    </div>
+                    <div class="timeline-item right">
+                        <span class="tl-time">18:00</span>
+                        <span class="tl-desc">Večeře a zábava</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dresscode -->
+            <section id="dresscode" class="info-card">
+                <h2 class="section-heading">Dresscode</h2>
+                <div class="color-swatches">
+                    <span class="swatch" style="background-color: #D69E97;" title="Starorůžová"></span>
+                    <span class="swatch" style="background-color: #9EB5CE;" title="Tlumená modrá"></span>
+                    <span class="swatch" style="background-color: #B4A2C8;" title="Levandulová"></span>
+                    <span class="swatch" style="background-color: #8CA68D;" title="Šalvějově zelená"></span>
+                    <span class="swatch" style="background-color: #D8DBD5;" title="Světle šedá"></span>
+                </div>
+                <p>Vyhněte se prosím bílé a červené barvě.</p>
+            </section>
+
+            <!-- Svatební dary -->
+            <section id="dary" class="info-card">
+                <h2 class="section-heading">Svatební dary</h2>
+                <p>
+                    Hlavně když tu budete s námi! Pokud byste nás ale chtěli přece jen něčím obdarovat, 
+                    největší radost nám udělá příspěvek na naše společné novomanželské bydlení.
+                </p>
+            </section>
+
+            <!-- RSVP formulář -->
+            <section id="rsvp" class="info-card">
+                <h2 class="section-heading">RSVP – Potvrzení účasti</h2>
+                <form id="rsvp-form" class="rsvp-form">
+                    <input type="text" name="jmeno" placeholder="Vaše jméno a příjmení" required>
+                    <input type="email" name="email" placeholder="Váš e-mail" required>
+                    <select name="ucast" required>
+                        <option value="" disabled selected>Zvolte možnost</option>
+                        <option value="ano">S radostí dorazím</option>
+                        <option value="ne">Bohužel se nemohu zúčastnit</option>
+                    </select>
+                    <button type="submit" class="submit-btn">Odeslat odpověď</button>
+                    <p id="rsvp-status" class="rsvp-status"></p>
+                </form>
+            </section>
+
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
