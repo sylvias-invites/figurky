@@ -34,14 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 typeWriter(dateEl, dateText, 95, () => {
                     // Nakonec se objeví výzva se šipkou dolů
                     setTimeout(() => {
-                        scrollPrompt.classList.add("visible");
+                        isTypewriterFinished = true;
+                        if (window.scrollY <= 40) {
+                           scrollPrompt.classList.add("visible");
+                        }
                     }, 300);
                 });
             }, 350);
         });
     }, 600);
 
-    // 2. ZOBRAZENÍ MENU AŽ PO ODSCROLLOVÁNÍ Z ÚVODNÍ OBRAZOVKY
+       // 2. ZOBRAZENÍ MENU A SKRYTÍ VÝZVY KE SCROLLOVÁNÍ
+    let isTypewriterFinished = false;
+
     window.addEventListener("scroll", () => {
         const triggerPoint = heroSection.offsetHeight * 0.65;
         if (window.scrollY > triggerPoint) {
@@ -49,7 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             stickyHeader.classList.remove("visible");
         }
+
+        // Skryje výzvu ke scrollování, jakmile uživatel sjede dolů
+        if (window.scrollY > 40) {
+            scrollPrompt.classList.remove("visible");
+        } else if (isTypewriterFinished) {
+            scrollPrompt.classList.add("visible");
+        }
     });
+
 
     // Ovládání bočního menu
     const menuToggle = document.getElementById("menu-toggle");
