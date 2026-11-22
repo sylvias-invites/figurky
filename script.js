@@ -144,4 +144,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     animateConfetti();
+
+    // 4. ODPOČET K DATU SVATBY (29. 9. 2027 11:00)
+    const weddingDate = new Date("2027-09-29T11:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+
+        const daysEl = document.getElementById("cd-days");
+        if (!daysEl) return;
+
+        if (diff <= 0) {
+            daysEl.textContent = "0";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        daysEl.textContent = days;
+        document.getElementById("cd-hours").textContent = hours;
+        document.getElementById("cd-minutes").textContent = minutes;
+        document.getElementById("cd-seconds").textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 5. ODESLÁNÍ RSVP FORMULÁŘE
+    const rsvpForm = document.getElementById("rsvp-form");
+    if (rsvpForm) {
+        rsvpForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            document.getElementById("rsvp-status").textContent = "Děkujeme! Vaše odpověď byla zaznamenána.";
+            rsvpForm.reset();
+        });
+    }
+
+    
 });
