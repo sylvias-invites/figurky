@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Konfety přes celou obrazovku bez blokování klikání */
+/* Konfety */
 #confetti-canvas {
     position: fixed;
     top: 0;
@@ -34,7 +34,7 @@ body {
     z-index: 50;
 }
 
-/* STICKY MENU (zobrazí se po scrollu) */
+/*  MENU */
 .sticky-header {
     position: fixed;
     top: 0;
